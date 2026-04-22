@@ -1,122 +1,284 @@
-# Universidad Autónoma de Tamaulipas  
-## Facultad de Ingeniería y Ciencias  
-### Materia: Programación Estructurada  
-#### Docente: Dr. Alan Díaz Manríquez
+# 🎛️ Convey - Sistema Clasificador de Objetos por Color
 
-# 🎛️ Convey: Sistema Clasificador de Objetos por Color
+![Lenguaje](https://img.shields.io/badge/C-ANSI-blue)
+![Plataforma](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green)
+![Estado](https://img.shields.io/badge/Estado-Académico-orange)
+![Documentación](https://img.shields.io/badge/Docs-Doxygen-blueviolet)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-lightgrey)
 
-En la Facultad de Ingeniería y Ciencias (FIC), surge la necesidad de contar con una herramienta que permita desarrollar, probar y ejecutar programas en lenguaje C para el control de un **sistema clasificador de objetos por color**, tanto en un entorno **simulado** como en un entorno **físico**.
+---
 
-Con este propósito se desarrolló **Convey**, una librería en C que abstrae la comunicación con el sistema clasificador y permite que los alumnos se enfoquen en la lógica del programa, utilizando primitivas sencillas para controlar la banda transportadora, leer el color detectado y operar las compuertas de clasificación.
+## 🏫 Universidad Autónoma de Tamaulipas  
+### Facultad de Ingeniería y Ciencias  
+**Materia:** Programación Estructurada  
+**Docente:** Dr. Alan Díaz Manríquez  
 
-Este proyecto está pensado como base para prácticas y proyectos finales de la materia de **Programación Estructurada**, permitiendo aplicar conocimientos como:
+---
 
-- Uso de estructuras condicionales y repetitivas
-- Modularidad mediante funciones
-- Manejo de arreglos
+## 📌 Descripción
+
+**Convey** es una librería en C diseñada para controlar un sistema clasificador de objetos por color, tanto en un entorno:
+
+- 🖥️ **Simulado** mediante TCP
+- ⚙️ **Físico** mediante comunicación serial con Arduino
+
+El propósito principal de este proyecto es que los alumnos desarrollen la lógica del sistema utilizando programación estructurada, sin preocuparse por los detalles internos de la comunicación con el simulador o el hardware real.
+
+Convey permite escribir un solo programa principal en C y reutilizarlo en ambos escenarios cambiando únicamente la forma en que se inicializa la conexión.
+
+---
+
+## 🎬 Vista previa del simulador
+
+Coloca el GIF dentro de la carpeta:
+
+```text
+assets/convey_demo.gif
+```
+
+Y aparecerá aquí:
+
+![Demo de ConveySimulator](assets/convey_demo.gif)
+
+> Si todavía no has agregado el GIF, puedes dejar esa ruta y añadir el archivo más adelante.
+
+---
+
+## 📚 Tabla de contenidos
+
+- [Objetivo del Proyecto](#-objetivo-del-proyecto)
+- [Características](#-características)
+- [Lógica de Clasificación](#-lógica-de-clasificación)
+- [Arquitectura General](#-arquitectura-general)
+- [Quick Start](#-quick-start)
+  - [Uso con simulador](#uso-con-simulador)
+  - [Uso con sistema físico](#uso-con-sistema-físico)
+- [Estructura del Programa del Alumno](#-estructura-del-programa-del-alumno)
+  - [Modo Automático](#️-modo-automático)
+  - [Modo Manual](#-modo-manual)
+  - [Estadísticas](#-estadísticas)
+  - [Historial Circular](#-historial-circular)
+  - [Reinicio de Datos](#-reinicio-de-datos)
+- [API de la Librería](#-api-de-la-librería)
+- [Compilación](#-compilación)
+- [ConveySimulator](#-conveysimulator)
+- [Documentación](#-documentación)
+- [Estructura Recomendada del Repositorio](#-estructura-recomendada-del-repositorio)
+- [Starter Code para Alumnos](#-starter-code-para-alumnos)
+- [Evaluación del Proyecto](#-evaluación-del-proyecto)
+- [Cronograma](#-cronograma)
+- [Entregables](#-entregables)
+- [Créditos](#-créditos)
+
+---
+
+## 🎯 Objetivo del Proyecto
+
+Desarrollar en lenguaje C un sistema completo de control para clasificar objetos por color, integrando los conocimientos vistos en la materia, tales como:
+
+- Estructuras condicionales
+- Estructuras repetitivas
+- Funciones
+- Arreglos
 - Historial circular
-- Estadísticas de ejecución
+- Estadísticas
 - Menús interactivos
 - Comunicación con dispositivos externos
-- Portabilidad entre simulador y hardware real
 
-Cada equipo será responsable de desarrollar el programa principal en C que interactúe con el sistema clasificador por medio de la librería **Convey**.
-
----
-
-## Menú de Contenidos
-
-- [Descripción General](#descripción-general)
-- [Arquitectura del Proyecto](#arquitectura-del-proyecto)
-- [Librería `convey`](#librería-convey)
-  - [Primitivas disponibles](#primitivas-disponibles)
-  - [Conexión por TCP](#conexión-por-tcp)
-  - [Conexión por Serial](#conexión-por-serial)
-  - [Funciones de teclado portable](#funciones-de-teclado-portable)
-- [Compilación](#compilación)
-- [ConveySimulator](#conveysimulator)
-- [Documentación](#documentación)
-- [Evaluación del Proyecto](#evaluación-del-proyecto)
-- [Cronograma de Exposición de Proyectos](#cronograma-de-exposición-de-proyectos)
-- [Archivos Entregables](#-archivos-entregables)
-- [Créditos](#créditos)
+El programa desarrollado por el alumno deberá ser capaz de controlar la banda, leer el color del objeto y decidir a qué destino debe enviarlo.
 
 ---
 
-## Descripción General
+## ✨ Características
 
-El sistema clasificador consta de los siguientes elementos principales:
-
-- Una **banda transportadora**
-- Un **sensor de color**
-- Dos **compuertas**
-- Tres destinos de clasificación:
-  - **Puerta 1**
-  - **Puerta 2**
-  - **Caja final / Box_3**
-- Un sistema de control físico basado en **Arduino**
-- Un entorno visual de prueba mediante **ConveySimulator**
-
-El objetivo del programa desarrollado por el alumno es leer el color detectado por el sistema y decidir a qué destino debe enviarse cada objeto, utilizando las primitivas proporcionadas por la librería `convey`.
-
-La lógica básica de clasificación es:
-
-- **Rojo** → Abrir **Puerta 1**
-- **Verde** → Abrir **Puerta 2**
-- **Amarillo** → No abrir ninguna compuerta, el objeto continúa hacia **Box_3**
+- API simple en C
+- Soporte para **TCP** y **serial**
+- Misma lógica para simulador y hardware real
+- Funciones portables de teclado
+- Compatible con Windows, Linux y macOS
+- Ideal para prácticas de programación estructurada
+- Documentación generada con Doxygen
+- Fácil integración con programas hechos por alumnos
 
 ---
 
-## Arquitectura del Proyecto
+## 🧠 Lógica de Clasificación
 
-La librería Convey está diseñada para trabajar en dos modos:
+La clasificación básica del sistema es:
+
+| Color detectado | Acción |
+|-----------------|--------|
+| 🔴 Rojo         | Abrir **Puerta 1** |
+| 🟢 Verde        | Abrir **Puerta 2** |
+| 🟡 Amarillo     | No abrir compuerta, continúa a **Box_3** |
+
+---
+
+## 🏗️ Arquitectura General
 
 ### 1. Modo Simulado
-
-El programa en C se conecta por **TCP** a **ConveySimulator**, el cual simula visualmente:
-
-- El movimiento de la banda
-- El paso de objetos
-- La lectura del sensor
-- La apertura/cierre de compuertas
-- La clasificación final
-
-Arquitectura general:
 
 ```text
 Programa en C --> TCP --> ConveySimulator
 ```
 
----
-
 ### 2. Modo Físico
-
-El programa en C se conecta por **serial** a un sistema físico controlado con Arduino.
-
-Arquitectura general:
 
 ```text
 Programa en C --> Serial --> Arduino / Sistema físico
 ```
 
----
-
-## Librería `convey`
-
-La librería `convey` abstrae toda la comunicación con el sistema, ya sea simulado o físico. Esto permite que el alumno escriba un solo programa principal en C y cambie únicamente la forma de inicializar la conexión.
-
-Archivos principales:
-
-- `convey.h`
-- `convey.c`
+La librería `convey` se encarga de ocultar estos detalles, de modo que el código principal del alumno sea el mismo en ambos casos.
 
 ---
 
-### Primitivas disponibles
+## 🚀 Quick Start
 
-La librería expone las siguientes funciones:
+### Uso con simulador
 
-#### Inicialización
+```c
+#include <stdio.h>
+#include "convey.h"
+
+int main(void)
+{
+    if (inicializarConexionTCP("127.0.0.1", 5000) != 0) {
+        printf("Error de conexion\n");
+        return 1;
+    }
+
+    if (encenderBanda() == 0) {
+        printf("Banda encendida\n");
+    }
+
+    printf("Color detectado: %d\n", leerColor());
+
+    apagarBanda();
+    cerrarConexion();
+    restaurarTerminal();
+
+    return 0;
+}
+```
+
+### Uso con sistema físico
+
+#### macOS / Linux
+
+```c
+#include <stdio.h>
+#include "convey.h"
+
+int main(void)
+{
+    if (inicializarConexionSerial("/dev/cu.usbserial-1140", 115200) != 0) {
+        printf("Error de conexion serial\n");
+        return 1;
+    }
+
+    if (encenderBanda() == 0) {
+        printf("Banda encendida\n");
+    }
+
+    printf("Color detectado: %d\n", leerColor());
+
+    apagarBanda();
+    cerrarConexion();
+    restaurarTerminal();
+
+    return 0;
+}
+```
+
+#### Windows
+
+```c
+#include <stdio.h>
+#include "convey.h"
+
+int main(void)
+{
+    if (inicializarConexionSerial("COM5", 115200) != 0) {
+        printf("Error de conexion serial\n");
+        return 1;
+    }
+
+    if (encenderBanda() == 0) {
+        printf("Banda encendida\n");
+    }
+
+    printf("Color detectado: %d\n", leerColor());
+
+    apagarBanda();
+    cerrarConexion();
+    restaurarTerminal();
+
+    return 0;
+}
+```
+
+---
+
+## 🧩 Estructura del Programa del Alumno
+
+El programa que desarrollen los alumnos debe incluir al menos un menú principal con las siguientes opciones.
+
+### ⚙️ Modo Automático
+
+En este modo el sistema debe:
+
+- Encender la banda
+- Leer continuamente el color
+- Detectar cuándo aparece un nuevo objeto
+- Clasificarlo automáticamente
+- Salir del ciclo al presionar una tecla, por ejemplo `q`
+
+### 🎮 Modo Manual
+
+Debe permitir operar el sistema manualmente mediante un menú con opciones como:
+
+- Encender banda
+- Apagar banda
+- Leer color
+- Abrir puerta 1
+- Abrir puerta 2
+- Cerrar puerta 1
+- Cerrar puerta 2
+- Cerrar todas las puertas
+
+### 📊 Estadísticas
+
+El programa debe llevar un conteo de:
+
+- Total de objetos procesados
+- Cantidad de objetos rojos
+- Cantidad de objetos verdes
+- Cantidad de objetos amarillos
+- Porcentaje de cada color
+
+### 🔄 Historial Circular
+
+El historial debe implementarse con arreglos de tamaño fijo y funcionar como buffer circular.
+
+Debe almacenar, por ejemplo:
+
+- Color detectado
+- Destino al que se envió el objeto
+
+### 🔁 Reinicio de Datos
+
+El programa debe permitir:
+
+- Reiniciar estadísticas
+- Limpiar historial
+- Apagar la banda
+- Cerrar las compuertas
+
+---
+
+## 🔌 API de la Librería
+
+### Inicialización
 
 ```c
 int inicializarConexionTCP(const char* host, int puerto);
@@ -124,7 +286,7 @@ int inicializarConexionSerial(const char* puerto, int baudrate);
 int cerrarConexion(void);
 ```
 
-#### Control del sistema
+### Control del sistema
 
 ```c
 int encenderBanda(void);
@@ -135,7 +297,7 @@ int cerrarPuerta(int puerta);
 int cerrarPuertas(void);
 ```
 
-#### Utilidades de teclado portable
+### Teclado portable
 
 ```c
 int teclaDisponible(void);
@@ -143,87 +305,20 @@ int leerTecla(void);
 void restaurarTerminal(void);
 ```
 
-Estas funciones permiten detectar teclas sin bloquear totalmente la ejecución del programa y funcionan de manera portable en Windows y macOS/Linux.
-
 ---
 
-### Conexión por TCP
-
-Para utilizar Convey con el simulador:
-
-```c
-inicializarConexionTCP("127.0.0.1", 5000);
-```
-
-Esto requiere que **ConveySimulator** esté ejecutándose previamente y escuchando en el puerto configurado.
-
----
-
-### Conexión por Serial
-
-Para utilizar Convey con el sistema físico:
-
-#### macOS / Linux
-
-```c
-inicializarConexionSerial("/dev/cu.usbserial-1140", 115200);
-```
-
-#### Windows
-
-```c
-inicializarConexionSerial("COM5", 115200);
-```
-
-> **Nota:** En Windows, si el puerto es `COM10` o mayor, puede ser necesario utilizar el formato:
->
-> ```c
-> inicializarConexionSerial("\\\\.\\COM10", 115200);
-> ```
-
----
-
-### Funciones de teclado portable
-
-La librería incluye funciones auxiliares para detectar teclas en modo consola de forma multiplataforma:
-
-- `teclaDisponible()`  
-  Verifica si el usuario ha presionado alguna tecla.
-
-- `leerTecla()`  
-  Lee la tecla presionada.
-
-- `restaurarTerminal()`  
-  Restaura el estado de la terminal al finalizar el programa (especialmente importante en macOS/Linux).
-
-#### Ejemplo básico:
-
-```c
-while (1) {
-    if (teclaDisponible()) {
-        int c = leerTecla();
-        if (c == 'q' || c == 'Q') {
-            break;
-        }
-    }
-}
-restaurarTerminal();
-```
-
----
-
-## Compilación
+## 🛠️ Compilación
 
 ### macOS / Linux
 
 ```bash
-clang main.c convey.c -o programa
+gcc main.c convey.c -o programa
 ```
 
 o
 
 ```bash
-gcc main.c convey.c -o programa
+clang main.c convey.c -o programa
 ```
 
 ### Windows (MinGW)
@@ -232,83 +327,144 @@ gcc main.c convey.c -o programa
 gcc main.c convey.c -o programa.exe -lws2_32
 ```
 
-> En Windows, la librería `ws2_32` es necesaria para la comunicación TCP.
+> En Windows, `-lws2_32` es necesario para soporte TCP.
 
 ---
 
-## ConveySimulator
+## 🖥️ ConveySimulator
 
-**ConveySimulator** es la aplicación visual asociada a la librería `convey`, diseñada para permitir el desarrollo y prueba del sistema sin necesidad de utilizar el hardware físico.
+**ConveySimulator** es la aplicación visual utilizada para probar el sistema sin necesidad del hardware real.
 
-Entre sus características se incluyen:
+Incluye:
 
-- Simulación de banda transportadora
-- Simulación de sensor de color
-- Simulación de compuertas
-- Interfaz visual con paneles de depuración
-- Indicadores de color y estado
-- Comunicación TCP con programas en C
-- Soporte para modo ventana y ejecución independiente
-
----
+- Banda transportadora
+- Sensor de color
+- Compuertas
+- Cajas de clasificación
+- Interfaz visual
+- Indicadores de estado
+- Paneles de depuración
+- Comunicación por TCP con programas en C
 
 ### Instalador
 
-Más adelante este proyecto incluirá un instalador de **ConveySimulator** para facilitar su distribución y ejecución sin necesidad de abrir Unity manualmente.
+Más adelante este proyecto incluirá un instalador de **ConveySimulator** para facilitar su distribución en:
 
-Se contempla soporte futuro para:
+- macOS
+- Windows
 
-- Instalador en **macOS**
-- Instalador en **Windows**
-- Ejecución simplificada del simulador
-- Integración con ejemplos base
-
-> Esta funcionalidad será agregada posteriormente.
+El objetivo es que el alumno pueda ejecutar el simulador sin abrir Unity manualmente.
 
 ---
 
-## Documentación
+## 📚 Documentación
 
-La documentación técnica de la librería `convey` será generada con **Doxygen** y estará disponible en la carpeta `docs/`.
+La documentación técnica de la librería fue generada con **Doxygen**.
 
-### Enlace planeado
+Puedes consultarla aquí:
 
-- [Documentación HTML](docs/index.html)
+- 🔗 [Documentación HTML](https://calix35.github.io/Convey/)
 
-> La documentación será añadida posteriormente.
+La documentación incluye:
+
+- Descripción de funciones
+- Parámetros
+- Valores de retorno
+- Constantes
+- Navegación HTML
 
 ---
 
-## Evaluación del Proyecto
+## 📁 Estructura Recomendada del Repositorio
 
-El programa será evaluado con base en aspectos como:
+```text
+.
+├── assets/
+│   └── convey_demo.gif
+├── docs/
+│   └── index.html
+├── examples/
+│   ├── main_basico.c
+│   └── main_menu.c
+├── convey.c
+├── convey.h
+├── README.md
+└── Doxyfile
+```
+
+---
+
+## 🧪 Starter Code para Alumnos
+
+Una base mínima para empezar podría ser:
+
+```c
+#include <stdio.h>
+#include "convey.h"
+
+int main(void)
+{
+    int color;
+
+    if (inicializarConexionTCP("127.0.0.1", 5000) != 0) {
+        printf("Error al conectar\n");
+        return 1;
+    }
+
+    encenderBanda();
+
+    while (1) {
+        color = leerColor();
+
+        if (color == COLOR_RED) {
+            abrirPuerta(1);
+        } else if (color == COLOR_GREEN) {
+            abrirPuerta(2);
+        } else if (color == COLOR_YELLOW) {
+            cerrarPuertas();
+        }
+
+        if (teclaDisponible()) {
+            int c = leerTecla();
+            if (c == 'q' || c == 'Q') {
+                break;
+            }
+        }
+    }
+
+    apagarBanda();
+    cerrarPuertas();
+    cerrarConexion();
+    restaurarTerminal();
+
+    return 0;
+}
+```
+
+---
+
+## 📝 Evaluación del Proyecto
+
+El programa será evaluado con base en:
 
 - Implementación correcta de la lógica de clasificación
-- Uso adecuado de funciones
+- Uso de funciones
 - Uso de estructuras condicionales y repetitivas
-- Implementación de un menú interactivo
-- Generación de estadísticas
-- Uso de historial circular
-- Correcta operación de modo automático y modo manual
-- Claridad del programa y organización del código
+- Menú interactivo
+- Estadísticas
+- Historial circular
+- Modo automático y modo manual
+- Organización y claridad del código
 - Correcta compilación y ejecución
 
-> **Nota importante:** Aunque el proyecto puede trabajarse en equipo, la **evaluación será individual**.  
-> Cada alumno deberá demostrar de forma clara su comprensión del funcionamiento del programa durante la presentación o revisión.
+> **Nota:** Aunque el proyecto puede realizarse en equipo, la evaluación será individual.
 
 ---
 
-## Cronograma de Exposición de Proyectos
+## 📅 Cronograma
 
-Las exposiciones se llevarán a cabo de manera **presencial**, utilizando la computadora del alumno o equipo conectada al sistema correspondiente.
-
-> **Lugar:** Por definir
-
-> **Fecha y hora de entrega:** DD/MM/AAAA - HH:MM horas
-
-> El archivo fuente y el reporte deberán entregarse por el medio que indique el docente.
-
-> 📌 **Es requisito para entrega que el código compile correctamente**
+> **Lugar:** Por definir  
+> **Fecha y hora de entrega:** DD/MM/AAAA - HH:MM horas  
 
 ### Fechas y horarios de presentación
 
@@ -320,59 +476,30 @@ Las exposiciones se llevarán a cabo de manera **presencial**, utilizando la com
 | DD/MM/AAAA  | HH:MM - HH:MM   |                        |
 | DD/MM/AAAA  | HH:MM - HH:MM   |                        |
 | DD/MM/AAAA  | HH:MM - HH:MM   |                        |
-| DD/MM/AAAA  | HH:MM - HH:MM   |                        |
-| DD/MM/AAAA  | HH:MM - HH:MM   |                        |
-| DD/MM/AAAA  | HH:MM - HH:MM   |                        |
-| DD/MM/AAAA  | HH:MM - HH:MM   |                        |
 
-(Los tiempos son aproximados; **es responsabilidad del alumno estar pendiente de la fecha y hora que le corresponde**)
+(Los horarios son aproximados; es responsabilidad del alumno estar pendiente de su horario.)
 
 ---
 
-## 📄 Archivos Entregables
+## 📦 Entregables
 
-Este proyecto podrá realizarse en **equipo** (según lo indique el docente). Cada equipo o alumno deberá entregar al menos:
+Cada equipo o alumno deberá entregar al menos:
 
-1. `main.c` – Programa principal en C que implementa la lógica requerida.
-2. `reporte.pdf` – Documento con la descripción del proyecto.
+1. `main.c`
+2. `reporte.pdf`
 
 ### Estructura sugerida del reporte
 
-- **Portada**
-  - Nombres completos de los integrantes
-  - Matrículas y grupo
-  - Nombre del proyecto
-
-- **1. Descripción general del proyecto**
-  - ¿Qué hace el sistema?
-  - ¿Cómo se organiza el programa?
-  - ¿Qué modos implementa?
-
-- **2. Lógica de clasificación**
-  - Cómo se toma la decisión según el color detectado
-  - Qué ocurre con cada compuerta
-
-- **3. Estructuras de programación utilizadas**
-  - Funciones
-  - Condicionales
-  - Ciclos
-  - Arreglos
-  - Historial circular
-
-- **4. Estadísticas e historial**
-  - Cómo se almacenan
-  - Cómo se muestran
-
-- **5. Dificultades enfrentadas y aprendizajes**
-  - Qué problemas se presentaron
-  - Qué soluciones se implementaron
-
-- **6. Evidencia visual (opcional)**
-  - Capturas de pantalla
-  - Fotografías del prototipo o simulador
+- Portada
+- Descripción del proyecto
+- Explicación de la lógica de clasificación
+- Estructuras utilizadas
+- Estadísticas e historial
+- Dificultades enfrentadas
+- Evidencia visual (opcional)
 
 ---
 
-## Créditos
+## 👨‍💻 Créditos
 
-Este proyecto fue desarrollado como base para prácticas y proyectos integradores de la materia de **Programación Estructurada**, enfocándose en la construcción de lógica de control para un sistema clasificador de objetos por color, tanto en entorno simulado como físico.
+Proyecto académico desarrollado para la materia de **Programación Estructurada**, enfocado en la construcción de lógica de control para un sistema clasificador de objetos por color en entorno simulado y físico.
