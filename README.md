@@ -349,14 +349,44 @@ Incluye:
 - Paneles de depuración
 - Comunicación por TCP con programas en C
 
-### Instalador
+### 💿 Instalador
 
-Más adelante este proyecto incluirá un instalador de **ConveySimulator** para facilitar su distribución en:
+Se encuentra disponible la primera versión del instalador de **ConveySimulator**, el cual permite ejecutar el simulador de forma independiente sin necesidad de abrir Unity.
 
-- macOS
-- Windows
+👉 **Descarga directa:**
 
-El objetivo es que el alumno pueda ejecutar el simulador sin abrir Unity manualmente.
+- 🍎 **macOS / 🪟 Windows**  
+  [ConveySimulator.dmg](https://github.com/calix35/Convey/releases/download/v1.0.0/ConveySimulator.dmg)
+
+---
+
+### 📥 Instrucciones de instalación (macOS)
+
+1. Descargar el archivo `.dmg`
+2. Abrir el archivo
+3. Arrastrar **ConveySimulator.app** a la carpeta **Applications**
+4. Ejecutar la aplicación
+
+> ⚠️ Es posible que macOS muestre una advertencia de seguridad. En ese caso:
+> - Ir a **Preferencias del Sistema → Privacidad y Seguridad**
+> - Permitir la ejecución de la aplicación
+
+---
+
+### 📥 Uso en Windows (temporal)
+
+Actualmente se proporciona el mismo paquete como distribución inicial.  
+En futuras versiones se incluirá un instalador nativo para Windows.
+
+---
+
+### 🚧 Notas
+
+- Este instalador corresponde a una versión inicial del simulador.
+- Próximamente se añadirá:
+  - Instalador nativo para Windows (`.exe`)
+  - Mejoras en la distribución multiplataforma
+  - Automatización del proceso de instalación
 
 ---
 
