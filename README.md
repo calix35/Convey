@@ -67,7 +67,6 @@ La animación muestra el funcionamiento general del sistema, incluyendo:
 - [Compilación](#-compilación)
 - [ConveySimulator](#-conveysimulator)
 - [Documentación](#-documentación)
-- [Estructura Recomendada del Repositorio](#-estructura-recomendada-del-repositorio)
 - [Starter Code para Alumnos](#-starter-code-para-alumnos)
 - [Evaluación del Proyecto](#-evaluación-del-proyecto)
 - [Cronograma](#-cronograma)
@@ -376,25 +375,6 @@ La documentación incluye:
 - Valores de retorno
 - Constantes
 - Navegación HTML
-
----
-
-## 📁 Estructura Recomendada del Repositorio
-
-```text
-.
-├── assets/
-│   └── convey_demo.gif
-├── docs/
-│   └── index.html
-├── examples/
-│   ├── main_basico.c
-│   └── main_menu.c
-├── convey.c
-├── convey.h
-├── README.md
-└── Doxyfile
-```
 
 ---
 
