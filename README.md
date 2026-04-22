@@ -30,17 +30,21 @@ Convey permite escribir un solo programa principal en C y reutilizarlo en ambos 
 
 ## 🎬 Vista previa del simulador
 
-Coloca el GIF dentro de la carpeta:
-
-```text
-assets/convey_demo.gif
-```
-
-Y aparecerá aquí:
+A continuación se muestra una vista previa de **ConveySimulator** en ejecución:
 
 ![Demo de ConveySimulator](assets/convey_demo.gif)
 
-> Si todavía no has agregado el GIF, puedes dejar esa ruta y añadir el archivo más adelante.
+La animación muestra el funcionamiento general del sistema, incluyendo:
+
+- Movimiento de la banda transportadora
+
+- Detección de color
+
+- Apertura y cierre de compuertas
+
+- Clasificación de objetos
+
+- Interfaz visual del simulador
 
 ---
 
@@ -401,6 +405,7 @@ Una base mínima para empezar podría ser:
 ```c
 #include <stdio.h>
 #include "convey.h"
+
 
 int main(void)
 {
