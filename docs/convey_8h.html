@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Librería Convey: Referencia del archivo convey.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Librería Convey<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema clasificador con Arduino y C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('convey_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo convey.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Librería para controlar un sistema clasificador de objetos por color.  
+<a href="#details">Más...</a></p>
+
+<p><a href="convey_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9f8a3e34f7e2084b89585b4f0e510bc4" id="r_a9f8a3e34f7e2084b89585b4f0e510bc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f8a3e34f7e2084b89585b4f0e510bc4">COLOR_SIN_OBJETO</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a9f8a3e34f7e2084b89585b4f0e510bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Código para indicar que no hay objeto detectado.  <br /></td></tr>
+<tr class="separator:a9f8a3e34f7e2084b89585b4f0e510bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86358bf19927183dd7b4ae215a29731" id="r_ad86358bf19927183dd7b4ae215a29731"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86358bf19927183dd7b4ae215a29731">COLOR_RED</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ad86358bf19927183dd7b4ae215a29731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Código para indicar que se detectó el color rojo.  <br /></td></tr>
+<tr class="separator:ad86358bf19927183dd7b4ae215a29731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc9149f5de51bd9ac4f5ebbfa153f018" id="r_afc9149f5de51bd9ac4f5ebbfa153f018"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc9149f5de51bd9ac4f5ebbfa153f018">COLOR_GREEN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:afc9149f5de51bd9ac4f5ebbfa153f018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Código para indicar que se detectó el color verde.  <br /></td></tr>
+<tr class="separator:afc9149f5de51bd9ac4f5ebbfa153f018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4534b577b74a58b0f4b7be027af664e0" id="r_a4534b577b74a58b0f4b7be027af664e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4534b577b74a58b0f4b7be027af664e0">COLOR_YELLOW</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a4534b577b74a58b0f4b7be027af664e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Código para indicar que se detectó el color amarillo.  <br /></td></tr>
+<tr class="separator:a4534b577b74a58b0f4b7be027af664e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bab6591a09366d23b86d710ecc54af" id="r_ac7bab6591a09366d23b86d710ecc54af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7bab6591a09366d23b86d710ecc54af">COLOR_ERROR</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="memdesc:ac7bab6591a09366d23b86d710ecc54af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Código para indicar error en la lectura del color.  <br /></td></tr>
+<tr class="separator:ac7bab6591a09366d23b86d710ecc54af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92e7dde6b19de50369ea1b392c984f9" id="r_ad92e7dde6b19de50369ea1b392c984f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad92e7dde6b19de50369ea1b392c984f9">MODO_NINGUNO</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ad92e7dde6b19de50369ea1b392c984f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estado inicial sin conexión activa.  <br /></td></tr>
+<tr class="separator:ad92e7dde6b19de50369ea1b392c984f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffe5fa31aabc1ee734b8c6b591854ba" id="r_a3ffe5fa31aabc1ee734b8c6b591854ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ffe5fa31aabc1ee734b8c6b591854ba">MODO_TCP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a3ffe5fa31aabc1ee734b8c6b591854ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modo de conexión por TCP.  <br /></td></tr>
+<tr class="separator:a3ffe5fa31aabc1ee734b8c6b591854ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e61590b5d96dbd4554fdb241dafdf1" id="r_a21e61590b5d96dbd4554fdb241dafdf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21e61590b5d96dbd4554fdb241dafdf1">MODO_SERIAL</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a21e61590b5d96dbd4554fdb241dafdf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modo de conexión por puerto serial.  <br /></td></tr>
+<tr class="separator:a21e61590b5d96dbd4554fdb241dafdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5d4df15e1af62f59921b9758cbe276e4" id="r_a5d4df15e1af62f59921b9758cbe276e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d4df15e1af62f59921b9758cbe276e4">inicializarConexionTCP</a> (const char *host, int puerto)</td></tr>
+<tr class="memdesc:a5d4df15e1af62f59921b9758cbe276e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la conexión con el simulador mediante TCP.  <br /></td></tr>
+<tr class="separator:a5d4df15e1af62f59921b9758cbe276e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae90ed65aefb519a92e4f0251214c62b" id="r_aae90ed65aefb519a92e4f0251214c62b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae90ed65aefb519a92e4f0251214c62b">inicializarConexionSerial</a> (const char *puerto, int baudrate)</td></tr>
+<tr class="memdesc:aae90ed65aefb519a92e4f0251214c62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la conexión con el sistema físico por puerto serial.  <br /></td></tr>
+<tr class="separator:aae90ed65aefb519a92e4f0251214c62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9375f4dbcbbbc5aafe55bee81f83709" id="r_af9375f4dbcbbbc5aafe55bee81f83709"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9375f4dbcbbbc5aafe55bee81f83709">cerrarConexion</a> (void)</td></tr>
+<tr class="memdesc:af9375f4dbcbbbc5aafe55bee81f83709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cierra la conexión activa.  <br /></td></tr>
+<tr class="separator:af9375f4dbcbbbc5aafe55bee81f83709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9862918062870c8daee17daf3c6ff8d" id="r_af9862918062870c8daee17daf3c6ff8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9862918062870c8daee17daf3c6ff8d">encenderBanda</a> (void)</td></tr>
+<tr class="memdesc:af9862918062870c8daee17daf3c6ff8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enciende la banda transportadora.  <br /></td></tr>
+<tr class="separator:af9862918062870c8daee17daf3c6ff8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e6791f8ea26f40bc9c303ece88159f" id="r_ab4e6791f8ea26f40bc9c303ece88159f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e6791f8ea26f40bc9c303ece88159f">apagarBanda</a> (void)</td></tr>
+<tr class="memdesc:ab4e6791f8ea26f40bc9c303ece88159f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga la banda transportadora.  <br /></td></tr>
+<tr class="separator:ab4e6791f8ea26f40bc9c303ece88159f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6902709dc4895f17c42d24fba9d1e9d0" id="r_a6902709dc4895f17c42d24fba9d1e9d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6902709dc4895f17c42d24fba9d1e9d0">leerColor</a> (void)</td></tr>
+<tr class="memdesc:a6902709dc4895f17c42d24fba9d1e9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee el color detectado por el sensor.  <br /></td></tr>
+<tr class="separator:a6902709dc4895f17c42d24fba9d1e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103078cff23b2a92febcf0a60114efaa" id="r_a103078cff23b2a92febcf0a60114efaa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a103078cff23b2a92febcf0a60114efaa">abrirPuerta</a> (int puerta)</td></tr>
+<tr class="memdesc:a103078cff23b2a92febcf0a60114efaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre una compuerta de clasificación.  <br /></td></tr>
+<tr class="separator:a103078cff23b2a92febcf0a60114efaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470919e812a5f5c5f7022f61b9d01f9a" id="r_a470919e812a5f5c5f7022f61b9d01f9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a470919e812a5f5c5f7022f61b9d01f9a">cerrarPuerta</a> (int puerta)</td></tr>
+<tr class="memdesc:a470919e812a5f5c5f7022f61b9d01f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cierra una compuerta de clasificación.  <br /></td></tr>
+<tr class="separator:a470919e812a5f5c5f7022f61b9d01f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55967b5acb157edd37c3a4d8cfe0d34" id="r_aa55967b5acb157edd37c3a4d8cfe0d34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa55967b5acb157edd37c3a4d8cfe0d34">cerrarPuertas</a> (void)</td></tr>
+<tr class="memdesc:aa55967b5acb157edd37c3a4d8cfe0d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cierra todas las compuertas del sistema.  <br /></td></tr>
+<tr class="separator:aa55967b5acb157edd37c3a4d8cfe0d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665f3898e657eb4153c7de88beae0fa5" id="r_a665f3898e657eb4153c7de88beae0fa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a665f3898e657eb4153c7de88beae0fa5">teclaDisponible</a> (void)</td></tr>
+<tr class="memdesc:a665f3898e657eb4153c7de88beae0fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si hay una tecla disponible para lectura.  <br /></td></tr>
+<tr class="separator:a665f3898e657eb4153c7de88beae0fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bb3570fff90b9bac70d536e13838c4" id="r_a78bb3570fff90b9bac70d536e13838c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78bb3570fff90b9bac70d536e13838c4">leerTecla</a> (void)</td></tr>
+<tr class="memdesc:a78bb3570fff90b9bac70d536e13838c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee una tecla desde el teclado.  <br /></td></tr>
+<tr class="separator:a78bb3570fff90b9bac70d536e13838c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b6188dedf4623000de3b6933925692" id="r_a12b6188dedf4623000de3b6933925692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12b6188dedf4623000de3b6933925692">restaurarTerminal</a> (void)</td></tr>
+<tr class="memdesc:a12b6188dedf4623000de3b6933925692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restaura el estado normal de la terminal.  <br /></td></tr>
+<tr class="separator:a12b6188dedf4623000de3b6933925692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Librería para controlar un sistema clasificador de objetos por color. </p>
+<p>Esta librería permite controlar una banda transportadora y compuertas de clasificación, así como leer el color detectado por el sistema.</p>
+<p>Puede trabajar en dos modos:</p><ul>
+<li>Comunicación TCP con un simulador</li>
+<li>Comunicación serial con un sistema físico basado en Arduino</li>
+</ul>
+<p>También incluye funciones auxiliares para manejo portable de teclado. </p>
+</div><h2 class="groupheader">Documentación de «define»</h2>
+<a id="ac7bab6591a09366d23b86d710ecc54af" name="ac7bab6591a09366d23b86d710ecc54af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bab6591a09366d23b86d710ecc54af">&#9670;&#160;</a></span>COLOR_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLOR_ERROR&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Código para indicar error en la lectura del color. </p>
+
+</div>
+</div>
+<a id="afc9149f5de51bd9ac4f5ebbfa153f018" name="afc9149f5de51bd9ac4f5ebbfa153f018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9149f5de51bd9ac4f5ebbfa153f018">&#9670;&#160;</a></span>COLOR_GREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLOR_GREEN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Código para indicar que se detectó el color verde. </p>
+
+</div>
+</div>
+<a id="ad86358bf19927183dd7b4ae215a29731" name="ad86358bf19927183dd7b4ae215a29731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86358bf19927183dd7b4ae215a29731">&#9670;&#160;</a></span>COLOR_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLOR_RED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Código para indicar que se detectó el color rojo. </p>
+
+</div>
+</div>
+<a id="a9f8a3e34f7e2084b89585b4f0e510bc4" name="a9f8a3e34f7e2084b89585b4f0e510bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8a3e34f7e2084b89585b4f0e510bc4">&#9670;&#160;</a></span>COLOR_SIN_OBJETO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLOR_SIN_OBJETO&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Código para indicar que no hay objeto detectado. </p>
+
+</div>
+</div>
+<a id="a4534b577b74a58b0f4b7be027af664e0" name="a4534b577b74a58b0f4b7be027af664e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4534b577b74a58b0f4b7be027af664e0">&#9670;&#160;</a></span>COLOR_YELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLOR_YELLOW&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Código para indicar que se detectó el color amarillo. </p>
+
+</div>
+</div>
+<a id="ad92e7dde6b19de50369ea1b392c984f9" name="ad92e7dde6b19de50369ea1b392c984f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92e7dde6b19de50369ea1b392c984f9">&#9670;&#160;</a></span>MODO_NINGUNO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODO_NINGUNO&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estado inicial sin conexión activa. </p>
+
+</div>
+</div>
+<a id="a21e61590b5d96dbd4554fdb241dafdf1" name="a21e61590b5d96dbd4554fdb241dafdf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e61590b5d96dbd4554fdb241dafdf1">&#9670;&#160;</a></span>MODO_SERIAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODO_SERIAL&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modo de conexión por puerto serial. </p>
+
+</div>
+</div>
+<a id="a3ffe5fa31aabc1ee734b8c6b591854ba" name="a3ffe5fa31aabc1ee734b8c6b591854ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ffe5fa31aabc1ee734b8c6b591854ba">&#9670;&#160;</a></span>MODO_TCP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODO_TCP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modo de conexión por TCP. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a103078cff23b2a92febcf0a60114efaa" name="a103078cff23b2a92febcf0a60114efaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103078cff23b2a92febcf0a60114efaa">&#9670;&#160;</a></span>abrirPuerta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int abrirPuerta </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>puerta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abre una compuerta de clasificación. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">puerta</td><td>Número de compuerta a abrir. Valores esperados: 1 o 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la operación fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="ab4e6791f8ea26f40bc9c303ece88159f" name="ab4e6791f8ea26f40bc9c303ece88159f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e6791f8ea26f40bc9c303ece88159f">&#9670;&#160;</a></span>apagarBanda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int apagarBanda </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apaga la banda transportadora. </p>
+<p>Envía el comando correspondiente al sistema para detener la banda.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la operación fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="af9375f4dbcbbbc5aafe55bee81f83709" name="af9375f4dbcbbbc5aafe55bee81f83709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9375f4dbcbbbc5aafe55bee81f83709">&#9670;&#160;</a></span>cerrarConexion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cerrarConexion </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cierra la conexión activa. </p>
+<p>Cierra la conexión actual, ya sea TCP o serial.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>0 al finalizar correctamente. </dd></dl>
+
+</div>
+</div>
+<a id="a470919e812a5f5c5f7022f61b9d01f9a" name="a470919e812a5f5c5f7022f61b9d01f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470919e812a5f5c5f7022f61b9d01f9a">&#9670;&#160;</a></span>cerrarPuerta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cerrarPuerta </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>puerta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cierra una compuerta de clasificación. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">puerta</td><td>Número de compuerta a cerrar. Valores esperados: 1 o 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la operación fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="aa55967b5acb157edd37c3a4d8cfe0d34" name="aa55967b5acb157edd37c3a4d8cfe0d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55967b5acb157edd37c3a4d8cfe0d34">&#9670;&#160;</a></span>cerrarPuertas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cerrarPuertas </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cierra todas las compuertas del sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la operación fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="af9862918062870c8daee17daf3c6ff8d" name="af9862918062870c8daee17daf3c6ff8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9862918062870c8daee17daf3c6ff8d">&#9670;&#160;</a></span>encenderBanda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int encenderBanda </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enciende la banda transportadora. </p>
+<p>Envía el comando correspondiente al sistema para iniciar el movimiento de la banda.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la operación fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="aae90ed65aefb519a92e4f0251214c62b" name="aae90ed65aefb519a92e4f0251214c62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae90ed65aefb519a92e4f0251214c62b">&#9670;&#160;</a></span>inicializarConexionSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inicializarConexionSerial </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>puerto</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>baudrate</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la conexión con el sistema físico por puerto serial. </p>
+<p>Abre y configura un puerto serial para comunicarse con el hardware real controlado por Arduino.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">puerto</td><td>Nombre del puerto serial. Ejemplo en macOS/Linux: "/dev/cu.usbserial-1140" Ejemplo en Windows: "COM5" </td></tr>
+    <tr><td class="paramname">baudrate</td><td>Velocidad de comunicación serial. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la conexión fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a5d4df15e1af62f59921b9758cbe276e4" name="a5d4df15e1af62f59921b9758cbe276e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4df15e1af62f59921b9758cbe276e4">&#9670;&#160;</a></span>inicializarConexionTCP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inicializarConexionTCP </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>host</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>puerto</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la conexión con el simulador mediante TCP. </p>
+<p>Establece una conexión con un servidor TCP, normalmente el simulador visual del sistema clasificador.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Dirección IP o nombre del host. </td></tr>
+    <tr><td class="paramname">puerto</td><td>Puerto TCP del servidor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la conexión fue exitosa, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a6902709dc4895f17c42d24fba9d1e9d0" name="a6902709dc4895f17c42d24fba9d1e9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6902709dc4895f17c42d24fba9d1e9d0">&#9670;&#160;</a></span>leerColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leerColor </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee el color detectado por el sensor. </p>
+<p>Solicita al sistema la lectura actual del sensor de color.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Uno de los siguientes códigos:<ul>
+<li>COLOR_RED</li>
+<li>COLOR_GREEN</li>
+<li>COLOR_YELLOW</li>
+<li>COLOR_SIN_OBJETO</li>
+<li>COLOR_ERROR </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a78bb3570fff90b9bac70d536e13838c4" name="a78bb3570fff90b9bac70d536e13838c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78bb3570fff90b9bac70d536e13838c4">&#9670;&#160;</a></span>leerTecla()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leerTecla </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee una tecla desde el teclado. </p>
+<p>Debe usarse normalmente después de verificar con <code><a class="el" href="#a665f3898e657eb4153c7de88beae0fa5" title="Verifica si hay una tecla disponible para lectura.">teclaDisponible()</a></code>.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Código entero de la tecla leída, o -1 si no se pudo leer. </dd></dl>
+
+</div>
+</div>
+<a id="a12b6188dedf4623000de3b6933925692" name="a12b6188dedf4623000de3b6933925692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b6188dedf4623000de3b6933925692">&#9670;&#160;</a></span>restaurarTerminal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void restaurarTerminal </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restaura el estado normal de la terminal. </p>
+<p>En sistemas POSIX (como macOS/Linux), algunas funciones de teclado cambian temporalmente la configuración de la terminal. Esta función la restaura.</p>
+<p>En Windows, esta función no realiza acciones adicionales. </p>
+
+</div>
+</div>
+<a id="a665f3898e657eb4153c7de88beae0fa5" name="a665f3898e657eb4153c7de88beae0fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665f3898e657eb4153c7de88beae0fa5">&#9670;&#160;</a></span>teclaDisponible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teclaDisponible </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si hay una tecla disponible para lectura. </p>
+<p>Esta función permite detectar entrada de teclado sin bloquear totalmente la ejecución del programa.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>1 si hay una tecla disponible, 0 en caso contrario. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="convey_8h.html">convey.h</a></li>
+    <li class="footer">Generado el Martes, 21 de abril de 2026 18:15:51 para Librería Convey por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
