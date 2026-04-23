@@ -355,8 +355,11 @@ Se encuentra disponible la primera versión del instalador de **ConveySimulator*
 
 👉 **Descarga directa:**
 
-- 🍎 **macOS / 🪟 Windows**  
+- 🍎 **macOS**  
   [ConveySimulator.dmg](https://github.com/calix35/Convey/releases/download/v1.0.0/ConveySimulator.dmg)
+
+- 🪟 **Windows**  
+  [ConveySimulator.msi](https://github.com/calix35/Convey/releases/download/v1.0.0/ConveySimulator.msi)
 
 ---
 
@@ -373,10 +376,16 @@ Se encuentra disponible la primera versión del instalador de **ConveySimulator*
 
 ---
 
-### 📥 Uso en Windows (temporal)
+### 📥 Instrucciones de instalación (Windows)
 
-Actualmente se proporciona el mismo paquete como distribución inicial.  
-En futuras versiones se incluirá un instalador nativo para Windows.
+1. Descargar el archivo `.msi`
+2. Ejecutar el instalador
+3. Seguir los pasos del asistente de instalación
+4. Ejecutar **ConveySimulator** desde el menú inicio o acceso directo
+
+> ⚠️ En algunos casos, Windows puede mostrar una advertencia de seguridad (SmartScreen):
+> - Seleccionar **"Más información"**
+> - Luego hacer clic en **"Ejecutar de todas formas"**
 
 ---
 
