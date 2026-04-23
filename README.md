@@ -65,7 +65,7 @@ La animación muestra el funcionamiento general del sistema, incluyendo:
   - [Reinicio de Datos](#-reinicio-de-datos)
 - [API de la Librería](#-api-de-la-librería)
 - [Compilación](#-compilación)
-- [ConveySimulator](#-conveysimulator)
+- [ConveySimulator](#%EF%B8%8F-conveysimulator)
 - [Documentación](#-documentación)
 - [Starter Code para Alumnos](#-starter-code-para-alumnos)
 - [Evaluación del Proyecto](#-evaluación-del-proyecto)
